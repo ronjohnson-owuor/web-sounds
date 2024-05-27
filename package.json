@@ -1,6 +1,6 @@
 {
   "name": "@ronjohnson/web-sounds",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "this a package to add sounds to your website that need sounds eg button click sound etc",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

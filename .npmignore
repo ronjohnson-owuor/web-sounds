@@ -1,7 +1,9 @@
-./dist
-/dist
+
 ./node_modules
 /node_modules
 ./src
 ./tsconfig.json
 ./tsup.config.ts
+/src
+/tsconfig.json
+/tsup.config.ts
