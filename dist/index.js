@@ -20,40 +20,45 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.ts
 var src_exports = {};
 __export(src_exports, {
-  applause: () => applause,
-  applause_deep: () => applause_deep,
-  applause_firework: () => applause_firework
+  play_reaction: () => play_reaction
 });
 module.exports = __toCommonJS(src_exports);
 
 // src/sound.ts
 var sounds = {
-  "clap": {
-    "audience1": "https://opengameart.org/sites/default/files/audio_preview/applause.wav.mp3",
-    "audience_long_deep": "https://opengameart.org/sites/default/files/audio_preview/applause-clapping-church-crowd-immersive-preview.ogg.mp3",
-    "audience_firework": "https://opengameart.org/sites/default/files/applause_fireworks.mp3"
-  }
+  audience1: "https://opengameart.org/sites/default/files/audio_preview/applause.wav.mp3",
+  audience_long_deep: "https://opengameart.org/sites/default/files/audio_preview/applause-clapping-church-crowd-immersive-preview.ogg.mp3",
+  audience_firework: "https://opengameart.org/sites/default/files/applause_fireworks.mp3",
+  car_passing: "https://opengameart.org/sites/default/files/audio_preview/car1.wav.mp3",
+  car_hoot: "https://opengameart.org/sites/default/files/audio_preview/car2.wav.mp3",
+  car_engine_rave: "https://opengameart.org/sites/default/files/audio_preview/car_acceleration.ogg.mp3",
+  car_fixing: "https://opengameart.org/sites/default/files/scifiprev.mp3",
+  default: "https://opengameart.org/sites/default/files/audio_preview/applause.wav.mp3"
 };
 var sound_default = sounds;
 
 // src/sounds.ts
-function playAudio(url) {
+function playAudio(url, time) {
+  let duration = 7 * 1e3;
   let audio = new Audio();
   audio.src = url;
+  audio.onloadedmetadata = () => {
+    duration = Math.min(audio.duration, 5) * 1e3;
+  };
   audio.play();
+  audio.onplay = () => {
+    console.log("audio is playing");
+    setTimeout(() => {
+      audio.pause();
+      console.log("maximum reaction time is reached");
+    }, duration);
+  };
 }
-function applause() {
-  playAudio(sound_default.clap.audience1);
-}
-function applause_deep() {
-  playAudio(sound_default.clap.audience_long_deep);
-}
-function applause_firework() {
-  playAudio(sound_default.clap.audience_firework);
+function play_reaction(sound_name, time) {
+  const soundUrl = sound_default[sound_name] || sound_default.default;
+  playAudio(soundUrl, time ? time : 7);
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  applause,
-  applause_deep,
-  applause_firework
+  play_reaction
 });

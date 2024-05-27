@@ -1,5 +1,3 @@
-declare function applause(): void;
-declare function applause_deep(): void;
-declare function applause_firework(): void;
+declare function play_reaction(sound_name: string, time?: number): void;
 
-export { applause, applause_deep, applause_firework };
+export { play_reaction };
