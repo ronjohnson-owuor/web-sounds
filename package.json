@@ -1,0 +1,29 @@
+{
+  "name": "web-sounds",
+  "version": "0.0.1",
+  "description": "this a package to add sounds to your website that need sounds eg button click sound etc",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronjohnson-owuor/web-sounds.git"
+  },
+  "keywords": [
+    "web-sounds",
+    "web sounds"
+  ],
+  "author": "Ronjohnson Owuor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ronjohnson-owuor/web-sounds/issues"
+  },
+  "homepage": "https://github.com/ronjohnson-owuor/web-sounds#readme",
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  }
+}
