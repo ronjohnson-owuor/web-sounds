@@ -23,7 +23,7 @@ function playAudio(url:string,time:number){
 }
 
 
-export function play_reaction(sound_name:string,time?:number){
+    export function play_reaction(sound_name:string,time?:number){
         // time to be given in seconds
         const soundUrl = sounds[sound_name as keyof typeof sounds] || sounds.default;
         playAudio(soundUrl,time?time:7);
