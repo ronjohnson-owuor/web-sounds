@@ -12,7 +12,23 @@ const sounds  = {
         shovel_dig:"https://opengameart.org/sites/default/files/audio_preview/shovel.ogg.mp3",
         dig_underground:"https://opengameart.org/sites/default/files/dig_underground_1.mp3",
         rocket_flyby:"https://opengameart.org/sites/default/files/audio_preview/rocket.wav.mp3",
-        sex_sounds:"https://www.soundsnap.com/play?t=e&p=files/audio/33/238266-MF_Sex.mp3"
+        gun_cork:"https://cdn.freesound.org/previews/737/737577_15579660-lq.mp3",
+        space_launch:"https://cdn.freesound.org/previews/737/737578_71257-lq.mp3",
+        foot_walk2:"https://cdn.freesound.org/previews/157/157031_2835342-lq.mp3",
+        hospital_walk:"https://cdn.freesound.org/previews/58/58742_321967-lq.mp3",
+        walking_on_wood:"https://cdn.freesound.org/previews/394/394923_3232146-lq.mp3",
+        gravel_walk:"https://cdn.freesound.org/previews/43/43781_29541-lq.mp3",
+        baby_cry:"https://cdn.freesound.org/previews/386/386923_7227448-lq.mp3",
+        deep_baby_cry:"https://cdn.freesound.org/previews/667/667199_14585550-lq.mp3",
+        crying_new_born:"https://cdn.freesound.org/previews/211/211527_2451161-lq.mp3",
+        man_groan:"https://cdn.freesound.org/previews/133/133788_1688566-lq.mp3",
+        ghost_cry:"https://cdn.freesound.org/previews/392/392605_5937039-lq.mp3",
+        bird_cry:"https://cdn.freesound.org/previews/731/731772_12846320-lq.mp3",
+        baby_cry_long:"https://cdn.freesound.org/previews/58/58741_321967-lq.mp3",
+        evil_laugh:"https://cdn.freesound.org/previews/366/366174_875457-lq.mp3",
+        evil_laugh_loud:"https://cdn.freesound.org/previews/239/239580_2698284-lq.mp3",
+        witch_laugh:"https://cdn.freesound.org/previews/557/557529_10098211-lq.mp3",
+        audience_laugh:"https://cdn.freesound.org/previews/171/171114_2140699-lq.mp3"
 }
 
 export default sounds;
