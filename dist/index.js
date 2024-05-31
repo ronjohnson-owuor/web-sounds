@@ -55,7 +55,11 @@ var sounds = {
   evil_laugh: "https://cdn.freesound.org/previews/366/366174_875457-lq.mp3",
   evil_laugh_loud: "https://cdn.freesound.org/previews/239/239580_2698284-lq.mp3",
   witch_laugh: "https://cdn.freesound.org/previews/557/557529_10098211-lq.mp3",
-  audience_laugh: "https://cdn.freesound.org/previews/171/171114_2140699-lq.mp3"
+  audience_laugh: "https://cdn.freesound.org/previews/171/171114_2140699-lq.mp3",
+  button_click: "https://cdn.freesound.org/previews/707/707040_9658839-lq.mp3",
+  error: "https://cdn.freesound.org/previews/327/327736_3694529-lq.mp3",
+  success: "https://cdn.freesound.org/previews/511/511484_6890478-lq.mp3",
+  camera_open: "https://cdn.freesound.org/previews/624/624913_12172648-lq.mp3"
 };
 var sound_default = sounds;
 
