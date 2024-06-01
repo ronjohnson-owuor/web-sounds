@@ -20,6 +20,7 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.ts
 var src_exports = {};
 __export(src_exports, {
+  play_custom: () => play_custom,
   play_reaction: () => play_reaction
 });
 module.exports = __toCommonJS(src_exports);
@@ -65,11 +66,15 @@ var sound_default = sounds;
 
 // src/sounds.ts
 function playAudio(url, time) {
-  let duration = 7 * 1e3;
+  let duration = time * 1e3;
   let audio = new Audio();
   audio.src = url;
   audio.onloadedmetadata = () => {
-    duration = Math.min(audio.duration, 5) * 1e3;
+    if (time == -1) {
+      duration = audio.duration * 1e3;
+    } else {
+      duration = Math.min(audio.duration, time) * 1e3;
+    }
   };
   audio.play();
   audio.onplay = () => {
@@ -81,10 +86,14 @@ function playAudio(url, time) {
   };
 }
 function play_reaction(sound_name, time) {
-  const soundUrl = sound_default[sound_name] || sound_default.default;
+  let soundUrl = sound_default[sound_name] || sound_default.default;
   playAudio(soundUrl, time ? time : 7);
+}
+function play_custom(custom_url, time) {
+  playAudio(custom_url, time ? time : 7);
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  play_custom,
   play_reaction
 });
